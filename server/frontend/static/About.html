@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- Correct CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fb;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .about-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .role {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .email {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>About Us</h1>
+    <p>We are a passionate team building modern web solutions</p>
+</header>
+
+<div class="container">
+
+    <section class="about-section">
+        <h2>Who We Are</h2>
+        <p>
+            We are a dedicated development team focused on building scalable,
+            efficient, and user-friendly web applications. Our goal is to deliver
+            high-quality digital solutions with clean design and strong performance.
+        </p>
+    </section>
+
+    <section class="team">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Ali Khan">
+            <h3>Ali Khan</h3>
+            <p class="role">Frontend Developer</p>
+            <p>Responsible for UI design and responsive layouts using modern frameworks.</p>
+            <p class="email">ali.khan@example.com</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Sara Ahmed">
+            <h3>Sara Ahmed</h3>
+            <p class="role">Backend Developer</p>
+            <p>Handles server-side logic, APIs, and database integration.</p>
+            <p class="email">sara.ahmed@example.com</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a" alt="John Smith">
+            <h3>John Smith</h3>
+            <p class="role">UI/UX Designer</p>
+            <p>Designs user-friendly interfaces and ensures great user experience.</p>
+            <p class="email">john.smith@example.com</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Ayesha Malik">
+            <h3>Ayesha Malik</h3>
+            <p class="role">Project Manager</p>
+            <p>Manages project timelines, coordination, and delivery quality.</p>
+            <p class="email">ayesha.malik@example.com</p>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>
