@@ -1,133 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us - Best Cars Dealership</title>
 
-    <!-- Correct CSS Link -->
+    <!-- Required Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <!-- Existing CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            background: #f5f7fb;
-        }
-
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
         }
 
         .about-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .team {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 60px 20px;
             text-align: center;
         }
 
-        .card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
+        .about-section h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #222;
         }
 
-        .card h3 {
-            margin: 10px 0 5px;
-        }
-
-        .role {
-            color: #3498db;
-            font-weight: bold;
-        }
-
-        .email {
-            font-size: 14px;
+        .about-section p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 18px;
             color: #555;
+            line-height: 1.8;
+        }
+
+        .team-section {
+            padding: 60px 20px;
+        }
+
+        .team-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .team-title h2 {
+            font-size: 36px;
+            color: #222;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .team-card {
+            background: #fff;
+            border-radius: 12px;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .team-info h3 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .team-info h5 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .team-info p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .team-info a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .team-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media(max-width: 768px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>About Us</h1>
-    <p>We are a passionate team building modern web solutions</p>
-</header>
-
-<div class="container">
-
+    <!-- About Section -->
     <section class="about-section">
-        <h2>Who We Are</h2>
+        <h1>About Us</h1>
+
         <p>
-            We are a dedicated development team focused on building scalable,
-            efficient, and user-friendly web applications. Our goal is to deliver
-            high-quality digital solutions with clean design and strong performance.
+            Welcome to Best Cars dealership, home to the best cars in North America.
+            We deal in sale of domestic and imported cars at reasonable prices.
+        </p>
+
+        <br>
+
+        <p>
+            At Best Cars Dealership, we are committed to providing our customers with
+            high-quality vehicles, exceptional customer service, and affordable pricing.
+            Our experienced team helps customers find the perfect car that matches their
+            needs and budget.
         </p>
     </section>
 
-    <section class="team">
+    <!-- Team Section -->
+    <section class="team-section">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Ali Khan">
-            <h3>Ali Khan</h3>
-            <p class="role">Frontend Developer</p>
-            <p>Responsible for UI design and responsive layouts using modern frameworks.</p>
-            <p class="email">ali.khan@example.com</p>
+        <div class="team-title">
+            <h2>Meet Our Team</h2>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Sara Ahmed">
-            <h3>Sara Ahmed</h3>
-            <p class="role">Backend Developer</p>
-            <p>Handles server-side logic, APIs, and database integration.</p>
-            <p class="email">sara.ahmed@example.com</p>
-        </div>
+        <div class="team-container">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a" alt="John Smith">
-            <h3>John Smith</h3>
-            <p class="role">UI/UX Designer</p>
-            <p>Designs user-friendly interfaces and ensures great user experience.</p>
-            <p class="email">john.smith@example.com</p>
-        </div>
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop"
+                    alt="John Smith">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Ayesha Malik">
-            <h3>Ayesha Malik</h3>
-            <p class="role">Project Manager</p>
-            <p>Manages project timelines, coordination, and delivery quality.</p>
-            <p class="email">ayesha.malik@example.com</p>
+                <div class="team-info">
+                    <h3>John Smith</h3>
+                    <h5>Sales Manager</h5>
+
+                    <p>
+                        John has over 10 years of experience in the automobile industry
+                        and specializes in helping customers choose the best vehicles.
+                    </p>
+
+                    <a href="mailto:john.smith@bestcars.com">
+                        john.smith@bestcars.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
+                    alt="Sarah Johnson">
+
+                <div class="team-info">
+                    <h3>Sarah Johnson</h3>
+                    <h5>Customer Relationship Officer</h5>
+
+                    <p>
+                        Sarah ensures every customer receives excellent service and support
+                        throughout their car purchasing journey.
+                    </p>
+
+                    <a href="mailto:sarah.johnson@bestcars.com">
+                        sarah.johnson@bestcars.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop"
+                    alt="Michael Brown">
+
+                <div class="team-info">
+                    <h3>Michael Brown</h3>
+                    <h5>Technical Specialist</h5>
+
+                    <p>
+                        Michael is responsible for vehicle inspections, maintenance guidance,
+                        and ensuring top-quality performance standards.
+                    </p>
+
+                    <a href="mailto:michael.brown@bestcars.com">
+                        michael.brown@bestcars.com
+                    </a>
+                </div>
+            </div>
+
         </div>
 
     </section>
 
-</div>
-
 </body>
+
 </html>
