@@ -1,149 +1,150 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Best Cars Dealership</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Required Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
-        .hero {
-            background: url("{% static 'images/contact-banner.jpg' %}") center/cover no-repeat;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 5px black;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
         }
 
-        .card-box {
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
+        .navbar {
+            background-color: #212529;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
         }
 
         .nav-link.active {
             font-weight: bold;
-            color: #0d6efd !important;
+            border-bottom: 2px solid #ffc107;
+        }
+
+        .contact-section {
+            padding: 60px 20px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-image {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            max-height: 350px;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Cars Dealership</a>
 
-        <a class="navbar-brand" href="#">Car Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About Us</a>
+                    </li>
 
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'contact' %}">Contact Us</a>
-                </li>
-            </ul>
-
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Contact Us</h1>
-</div>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row align-items-center">
 
-<!-- CONTENT -->
-<div class="container my-5">
+                <!-- Contact Information -->
+                <div class="col-md-6 mb-4">
+                    <div class="contact-card">
+                        <h2 class="mb-4">Contact Us</h2>
 
-    <div class="row">
+                        <p>
+                            We are always here to help you with your car buying experience.
+                            Feel free to contact us using the information below.
+                        </p>
 
-        <!-- INFO -->
-        <div class="col-md-6">
-            <div class="p-4 bg-light card-box">
+                        <hr>
 
-                <h3>Get in Touch</h3>
-                <p>We are here to assist you. Contact us anytime.</p>
+                        <h5>Address</h5>
+                        <p>
+                            123 Sheikh Zayed Road,<br>
+                            Dubai, United Arab Emirates
+                        </p>
 
-                <hr>
+                        <h5>Phone Number</h5>
+                        <p>+971 50 123 4567</p>
 
-                <p><strong>📍 Address:</strong> Sharjah, UAE</p>
-                <p><strong>📞 Phone:</strong> +971 50 123 4567</p>
-                <p><strong>📧 Email:</strong> support@carproject.com</p>
-                <p><strong>🕒 Hours:</strong> Mon - Fri (9 AM - 6 PM)</p>
+                        <h5>Email Address</h5>
+                        <p>support@carsdealership.com</p>
+
+                        <h5>Hours of Operation</h5>
+                        <p>
+                            Monday - Friday: 9:00 AM to 7:00 PM<br>
+                            Saturday: 10:00 AM to 5:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Image -->
+                <div class="col-md-6">
+                    <!-- Ensure this image exists in repository -->
+                    <img src="images/contact-showroom.jpg"
+                         alt="Car Dealership Showroom"
+                         class="contact-image">
+                </div>
 
             </div>
         </div>
+    </section>
 
-        <!-- IMAGE -->
-        <div class="col-md-6 text-center">
-            <img src="{% static 'images/contact-us.jpg' %}" class="img-fluid rounded" alt="Contact Image">
-        </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Cars Dealership. All Rights Reserved.</p>
+    </footer>
 
-    </div>
-
-    <!-- FORM -->
-    <div class="row mt-5">
-
-        <div class="col-md-12">
-
-            <div class="p-4 card-box">
-
-                <h4>Send Message</h4>
-
-                <form method="post">
-                    {% csrf_token %}
-
-                    <div class="mb-3">
-                        <label>Name</label>
-                        <input type="text" name="name" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Email</label>
-                        <input type="email" name="email" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Message</label>
-                        <textarea name="message" class="form-control" rows="4" required></textarea>
-                    </div>
-
-                    <button class="btn btn-primary" type="submit">Send</button>
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3">
-    © 2026 Car Project | All Rights Reserved
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/static/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
